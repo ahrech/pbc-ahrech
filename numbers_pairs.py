@@ -1,12 +1,13 @@
-# Duplicated pairs are not removed from the output yet :)
-
 def numbers_pairs(*number):
+    pairs = set()
+
     if len(number) < 2:
-        print "There must be at least 2 numbers"
-        return
+        return pairs
+
     for i in range(len(number)):
         a = number[i]
         for j in range(i + 1, len(number)):
             b = number[j]
             if a + b == 10:
-                print str(a) + '+' + str(b)
+                pairs.add((min(a, b), max(a, b)))
+    return pairs

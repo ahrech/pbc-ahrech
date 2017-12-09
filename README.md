@@ -12,6 +12,7 @@ Author: Anastasiya Hrechanova.
 
 `test_numbers_pairs.py` - a module with unit tests for numbers_pairs.py
 
+`conftest.py` - a module with Selenium setup fixture.
 
 To setup virtual environment execute the commands below:
 

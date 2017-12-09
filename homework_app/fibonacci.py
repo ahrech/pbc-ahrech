@@ -1,3 +1,7 @@
+from homework_app.decorator import print_args
+
+
+@print_args
 def fibonacci(n):
     if type(n) != int or n <= 0:
         return []

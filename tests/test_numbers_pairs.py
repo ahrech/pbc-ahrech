@@ -10,7 +10,7 @@ from homework_app.numbers_pairs import numbers_pairs
     ((1, 4, 5, 2, 8, 8, 3, 6, 9, 2, 25, -15), {(1, 9), (4, 6), (2, 8), (-15, 25)}),
     ((5, 5), {(5, 5)})
 ])
-def test_parametrized(test_input, expected):
+def test_parametrized(start_selenium, test_input, expected):
     assert numbers_pairs(*test_input) == expected
 
 
@@ -19,5 +19,5 @@ def test_parametrized(test_input, expected):
     ((-5,), set()),
     ((5, 7), set())
 ])
-def test_parametrized_invalid(test_input, expected):
+def test_parametrized_invalid(start_selenium, test_input, expected):
     assert numbers_pairs(*test_input) == expected

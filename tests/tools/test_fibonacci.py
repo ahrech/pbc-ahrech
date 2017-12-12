@@ -8,7 +8,7 @@ from pbc.tools.fibonacci import fibonacci
     (2, [0, 1]),
     (8, [0, 1, 1, 2, 3, 5, 8, 13])
 ])
-def test_parametrized(start_selenium, test_input, expected):
+def test_parametrized(test_input, expected):
     assert fibonacci(test_input) == expected
 
 
@@ -18,5 +18,5 @@ def test_parametrized(start_selenium, test_input, expected):
     ('test', []),
     (5.555, [])
 ])
-def test_parametrized_invalid(start_selenium, test_input, expected):
+def test_parametrized_invalid(test_input, expected):
     assert fibonacci(test_input) == expected

@@ -57,6 +57,7 @@ class Grid(BaseGrid):
             return False
         else:
             print("Selenium is already running.")
+            return True
 
 
 class StartGrid(BaseGrid):

@@ -1,5 +1,5 @@
 import pytest
-from homework_app.fibonacci import fibonacci
+from pbc.tools.fibonacci import fibonacci
 
 
 @pytest.mark.valid

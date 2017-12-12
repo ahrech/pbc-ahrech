@@ -1,4 +1,4 @@
-from homework_app.decorator import print_args
+from pbc.func_decorators import print_args
 
 
 @print_args

@@ -1,6 +1,6 @@
 import pytest
 
-from homework_app.numbers_pairs import numbers_pairs
+from pbc.tools.numbers import numbers_pairs
 
 
 @pytest.mark.valid

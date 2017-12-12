@@ -3,16 +3,31 @@ A repository for Python Boot Camp tasks.
 
 Author: Anastasiya Hrechanova.
 
-`fibonacci.py` - a module with a function which prints desired count of fibonacci numbers 
+Package `pbc.sg` contains the following modules:
 
-`numbers_pairs.py` - a module with a function which prints pairs of numbers which sum is = 10 for a given collection of numbers
+- `conftest.py` - a module with test fixtures.
+
+- `connections.py` - a module with SSH Client wrapper.
+
+- `sg.py` - a module for work with Selenium grid.
+
+- `test_sel_grid.py` - a module with tests for Selenium grid.
+
+Package `pbc.tools` contains the following modules:
+
+- `fibonacci.py` - a module with a function which prints desired count of fibonacci numbers 
+
+- `numbers.py` - a module with a function which prints pairs of numbers which sum is = 10 for a given collection of numbers
+
+`func_decorators.py` - a module with decorators.
+
+Package `tests.tools` contains the following unit tests:
+
+- `test_fibonacci.py` - a module with unit tests for fibonacci.py
+
+- `test_numbers.py` - a module with unit tests for numbers_pairs.py
 
 
-`test_fibonacci.py` - a module with unit tests for fibonacci.py
-
-`test_numbers_pairs.py` - a module with unit tests for numbers_pairs.py
-
-`conftest.py` - a module with Selenium setup fixture.
 
 To setup virtual environment execute the commands below:
 

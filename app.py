@@ -1,7 +1,7 @@
 import argparse
 
-from homework_app.fibonacci import fibonacci
-from homework_app.numbers_pairs import numbers_pairs
+from pbc.tools.fibonacci import fibonacci
+from pbc.tools.numbers import numbers_pairs
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="This app prints numbers pairs and/or fibonacci numbers.")

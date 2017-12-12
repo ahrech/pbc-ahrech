@@ -60,7 +60,7 @@ class Grid(BaseGrid):
             return True
 
 
-class StartGrid(BaseGrid):
+class SmartGrid(BaseGrid):
     def __init__(self, grid):
         self._g = grid
 

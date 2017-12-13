@@ -39,11 +39,13 @@ class Grid(BaseGrid):
     def start_hub(self):
         print 'Start hub'
         self._client.execute('java -jar selenium-server-standalone-3.8.0.jar -role hub >> log.txt 2>&1 &')
+        time.sleep(2)
 
     def add_node(self):
         print 'Add node'
         self._client.execute(
             'java -jar selenium-server-standalone-3.8.0.jar -role node  -nodeConfig sg-node.json >> log.txt 2>&1 &')
+        time.sleep(2)
 
     def is_downloaded(self):
         stdout = self._client.execute('test -f selenium-server-standalone-3.8.0.jar && echo yes')

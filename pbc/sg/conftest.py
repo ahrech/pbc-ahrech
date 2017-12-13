@@ -1,4 +1,5 @@
 import pytest
+from selenium import webdriver
 
 from pbc.sg.connections import SshClient
 
@@ -9,3 +10,10 @@ def ssh_client():
     yield client
     client.execute('killall java')
     client.close()
+
+
+@pytest.fixture(scope="module")
+def firefox():
+    f = webdriver.Firefox()
+    yield f
+    f.close()

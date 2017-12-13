@@ -13,6 +13,8 @@ Package `pbc.sg` contains the following modules:
 
 - `test_sel_grid.py` - a module with tests for Selenium grid.
 
+- `utils.py` - a module with utilities.
+
 Package `pbc.tools` contains the following modules:
 
 - `fibonacci.py` - a module with a function which prints desired count of fibonacci numbers 

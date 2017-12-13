@@ -24,7 +24,10 @@ class Grid(BaseGrid):
 
     def download(self):
         print 'Download'
-        stdout = self._client.execute('wget -O selenium-server-standalone-3.8.0.jar https://goo.gl/SVuU9X')
+        stdout = self._client.execute(
+            'wget -O selenium-server-standalone-3.8.0.jar https://goo.gl/SVuU9X '
+            '&& wget -O sg-node.json https://gist.github.com/extsoft/aed4cb6e0b1ae3cd1d38cafffdd79310/raw/')
+
         count = 0
         while count < 100:
             if stdout.channel.exit_status_ready():
@@ -40,7 +43,7 @@ class Grid(BaseGrid):
     def add_node(self):
         print 'Add node'
         self._client.execute(
-            'java -jar selenium-server-standalone-3.8.0.jar -role node  -hub http://localhost:4444/grid/register >> log.txt 2>&1 &')
+            'java -jar selenium-server-standalone-3.8.0.jar -role node  -nodeConfig sg-node.json >> log.txt 2>&1 &')
 
     def is_downloaded(self):
         stdout = self._client.execute('test -f selenium-server-standalone-3.8.0.jar && echo yes')
